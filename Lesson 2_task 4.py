@@ -2,9 +2,9 @@
 
 # 4. Write a Python program to check if a given number is Even or Odd
 
-x=(int(input())%2)==0
+num=int(input())
 
-res=x or 'Odd number'
-print(res)
+res=bool(num%2 == 0) or print('Odd')
 
+res=bool(num%2 != 0) or print('Even')
 
