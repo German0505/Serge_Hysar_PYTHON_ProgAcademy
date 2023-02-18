@@ -120,3 +120,14 @@ print(in_writing(a))
 
 # 6. Напишіть функцію, яка переводить ціле число з римського запису до десяткового.
 # Наприклад: XXII -> 22
+roman_n = [(1000, 'M'), (900, 'CM'), (500, 'D'), (400, 'CD'), (100, 'C'), (90, 'XC'), (50, 'L'), (40, 'XL'), (10, 'X'), (9, 'IX'), (5, 'V'), (4, 'IV'), (1, 'I')]
+def roman_numerals (num):
+    rom = ''
+    while num > 0:
+        for i, r in roman_n:
+            while num >= i:
+                rom += r
+                num -= i
+    return rom
+
+print(roman_numerals(15))
